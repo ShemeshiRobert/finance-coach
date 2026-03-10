@@ -1,0 +1,21 @@
+# ── Config & Validation ───────────────────────────────────────────────────────
+pydantic==2.7.1                    # data validation (built into FastAPI)
+pydantic-settings==2.2.1           # loads .env into a typed settings object
+python-dotenv==1.0.1               # reads .env file
+
+# ── HTTP Client ───────────────────────────────────────────────────────────────
+httpx==0.27.0                      # async HTTP client (used for webhook verification)
+
+# ── Web Framework ─────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0          # ASGI server that runs FastAPI
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy[asyncio]==2.0.30        # ORM — defines your tables as Python classes
+asyncpg==0.29.0                    # async PostgreSQL driver (SQLAlchemy uses this under the hood)
+alembic==1.13.1                    # database migrations (like git for your DB schema)
+pgvector==0.2.5                    # pgvector support for SQLAlchemy (for AI embeddings)
+
+# ── Auth & Security ───────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0   # JWT token generation and validation
+passlib[bcrypt]==1.7.4             # password hashing
